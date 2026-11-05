@@ -1371,7 +1371,12 @@ document.addEventListener('game-start', () => {
 });
 
 const report = $('#results-dialog');
-function openReport() { if (!report.open) report.showModal(); }
+let reportSound = null;
+function openReport() {
+  if (report.open) return;
+  report.showModal();
+  if (reportSound) { playSound(reportSound); reportSound = null; }
+}
 function finishFarmReturn() {
   cameraReturnActive = false;
   document.body.classList.remove('camera-moving');
@@ -1398,6 +1403,7 @@ $('#answer-form').addEventListener('submit', event => {
     saveProgress();
   }
   playSound(result.equationCorrect && result.solutionCorrect ? 'submit' : 'retry');
+  reportSound = result.equationCorrect && result.solutionCorrect ? 'success' : 'error';
   $('#results-title').textContent = result.equationCorrect && result.solutionCorrect ? 'Thank you for working so hard. Get some rest!' : 'The customer reported me a scammer! I need to try again.';
   $('#submitted-answer').textContent = `You wrote: ${equation} · Your letter's value: ${solution}`;
   $('#equation-result').textContent = `${result.equationCorrect ? '✓ Algebraic Equation correct.' : 'Try the equation again.'} ${result.detail}`;
