@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#dce8d0">
+  <meta name="description" content="Solve Uncle Fil’s algebra puzzle by inspecting baskets of apples, then read your results in the bedroom.">
+  <title>Algabro — Fil's Farm</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <div id="landscape-stage">
+  <main id="opening-scene" aria-label="Beginning scene / Start menu">
+    <span class="scene-label">BEGINNING SCENE / START MENU</span>
+    <svg class="bedroom-art" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid meet" role="group" aria-labelledby="room-title room-description">
+      <title id="room-title">A sunlit bedroom in the early morning</title>
+      <desc id="room-description">A quiet room with a neatly made bed, soft curtains, a child resting on the bed, bamboo window frames, and distant green hills beyond.</desc>
+      <defs>
+        <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#d9c995"/><stop offset="1" stop-color="#c6b67e"/></linearGradient>
+        <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#c7dad3"/><stop offset="1" stop-color="#f4d9ad"/></linearGradient>
+        <linearGradient id="sunlight" x2="1" y2="0"><stop stop-color="#f5d69a" stop-opacity=".08"/><stop offset="1" stop-color="#f6d69a" stop-opacity=".35"/></linearGradient>
+        <linearGradient id="cover" x2="0" y2="1"><stop stop-color="#82988a"/><stop offset="1" stop-color="#687f73"/></linearGradient>
+        <clipPath id="window-panes"><rect x="851" y="94" width="178" height="448"/><rect x="1073" y="94" width="178" height="448"/></clipPath>
+        <pattern id="bamboo" width="126" height="630" patternUnits="userSpaceOnUse"><path d="M12 0q-5 130 2 260t-3 370M47 0q5 150 0 300t4 330M91 0q-4 125 3 260t-1 370M119 0q-4 160 1 310t-2 320" fill="none" stroke="#8b7b4e" stroke-opacity=".35" stroke-width="3"/><path d="M7 150h12m-13 294h13M42 103h12m-12 318h13M86 176h13m-12 302h13M114 122h12m-12 345h12" fill="none" stroke="#9d8b58" stroke-opacity=".46" stroke-width="3"/></pattern>
+        <pattern id="floorboards" width="210" height="48" patternUnits="userSpaceOnUse"><path d="M0 47.5H210M80 0V47M175 0V47" fill="none" stroke="#68492f" stroke-opacity=".38" stroke-width="2"/><path d="M0 7h78m3 20h91m7-13h31" stroke="#e3bd8d" stroke-opacity=".3" stroke-width="2"/></pattern>
+        <filter id="soft-shadow" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur stdDeviation="17"/></filter>
+      </defs>
+      <path fill="url(#wall)" d="M0 0h1440v630H0z"/><path fill="url(#bamboo)" d="M0 0h1440v630H0z"/>
+      <path fill="#c8b9a4" d="M0 627h1440v18H0z"/><path fill="#a9784e" d="M0 645h1440v255H0z"/><path fill="url(#floorboards)" d="M0 645h1440v255H0z"/>
+      <g class="wall-title" aria-label="ALGABRO, Fil's Farm, by Sprig Games" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(295 160)" stroke="#735b36" stroke-width="11">
+          <path d="M4 56 21 4 39 56M10 38h23 M49 4v52h31 M120 13C110 1 94 1 84 10 70 23 72 48 86 55 99 61 116 54 122 40V32h-17 M139 56l17-52 18 52m-29-18h23 M190 4v52m0-52h19c19 0 19 19 0 25h-19m0 0h20c21 0 20 27 0 27h-20 M242 4v52m0-52h19c17 0 19 21 0 26h-19m9 0 22 26 M291 30c0-17 10-27 22-27s22 10 22 27-10 28-22 28-22-11-22-28z"/>
+        </g>
+        <g transform="translate(295 160)" stroke="#d4bd7c" stroke-width="4">
+          <path d="M4 56 21 4 39 56M10 38h23 M49 4v52h31 M120 13C110 1 94 1 84 10 70 23 72 48 86 55 99 61 116 54 122 40V32h-17 M139 56l17-52 18 52m-29-18h23 M190 4v52m0-52h19c19 0 19 19 0 25h-19m0 0h20c21 0 20 27 0 27h-20 M242 4v52m0-52h19c17 0 19 21 0 26h-19m9 0 22 26 M291 30c0-17 10-27 22-27s22 10 22 27-10 28-22 28-22-11-22-28z"/>
+        </g>
+        <g stroke="#735b36" stroke-width="2.5">
+          <path d="m309 200 12 4m-2-22 12 4m30 9 11 4m-1-21 12 4m31 16 11 4m-3-22 11 4m29 12 11 4m-3-23 11 4m29 19 11 4m-2-24 11 4m28 17 11 4m-2-21 11 4m25 12 11 4m0-22 11 4m22 17 11 4m-1-21 11 4m26 16 11 4m-1-23 11 4m30 16 11 4m0-21 11 4"/>
+        </g>
+        <path d="M332 236h266" stroke="#8d7748" stroke-width="2" opacity=".65"/>
+        <text x="465" y="272" text-anchor="middle" font-family="Georgia, serif" font-size="27" font-style="italic" letter-spacing="2" fill="#806b43" stroke="none">Fil's Farm</text>
+        <text x="465" y="298" text-anchor="middle" font-family="Georgia, serif" font-size="15" letter-spacing="1" fill="#806b43" stroke="none">by Sprig Games</text>
+      </g>
+      <g id="intro-calendar" class="wall-title" role="img" aria-label="Day 1" transform="translate(0 20)">
+        <rect x="408" y="308" width="120" height="136" rx="5" fill="#735b36" opacity=".16"/>
+        <path d="M405 323h120v110l-8 5-8-4-8 4-8-4-8 4-8-4-8 4-8-4-8 4-8-4-8 4-8-4-8 4-8-4-8 4z" fill="#e8d9b9" stroke="#a68b5d" stroke-width="1.5"/>
+        <rect x="405" y="303" width="120" height="128" rx="4" fill="#fff3d8" stroke="#a68b5d" stroke-width="2"/>
+        <path d="M409 303h112q4 0 4 4v30H405v-30q0-4 4-4z" fill="#8a7851"/>
+        <path d="M425 298v13m80-13v13" fill="none" stroke="#5f513b" stroke-width="5" stroke-linecap="round"/>
+        <path d="M413 345h104" fill="none" stroke="#cbbb97" stroke-width="1.5" stroke-dasharray="3 4"/>
+        <text x="465" y="328" text-anchor="middle" font-family="Georgia, serif" font-size="16" letter-spacing="4" fill="#fff3d8">DAY</text>
+        <text id="intro-calendar-day" x="465" y="407" text-anchor="middle" font-family="Georgia, serif" font-size="52" fill="#735b36">1</text>
+        <path d="m510 431 15-15h-15z" fill="#e8d9b9" stroke="#cbbb97" stroke-width="1"/>
+      </g>
+      <path fill="#f7e9cf" opacity=".3" d="m1010 602 255 0 175 298H870z"/>
+      <g class="window-glow"><rect x="849" y="93" width="438" height="449" rx="3" fill="#b39d81" opacity=".18" transform="translate(9 12)" filter="url(#soft-shadow)"/></g>
+      <g><rect x="838" y="80" width="204" height="476" rx="3" fill="#b99b59" stroke="#826a3d" stroke-width="3"/><rect x="1060" y="80" width="204" height="476" rx="3" fill="#b99b59" stroke="#826a3d" stroke-width="3"/><path d="M838 154h15m174 0h15M838 321h15m174 0h15M838 482h15m174 0h15M1060 154h15m174 0h15M1060 321h15m174 0h15M1060 482h15m174 0h15" fill="none" stroke="#e0c77e" stroke-width="5"/><rect x="851" y="94" width="178" height="448" fill="url(#sky)"/><rect x="1073" y="94" width="178" height="448" fill="url(#sky)"/><circle cx="1164" cy="222" r="45" fill="#f1c780" opacity=".8"/><path d="M851 396q53-64 106-18t72-9v173H851zm222-13q70-47 118-7t60-17v183h-178z" fill="#87998a"/><path d="M851 441q58-62 118-5t60-11v120H851zm222-3q69-56 121-13t57-16v136h-178z" fill="#6c8272"/><path d="M940 94v448m222-448v448M851 342h178m44 0h178" fill="none" stroke="#80643a" stroke-width="13" stroke-linecap="round"/><path d="M940 94v448m222-448v448M851 342h178m44 0h178" fill="none" stroke="#d0b36e" stroke-width="7" stroke-linecap="round"/><path d="M932 170h16m-16 82h16m-16 100h16m-16 82h16m214-264h16m-16 82h16m-16 100h16m-16 82h16m-300-118v16m68-16v16m112-16v16m68-16v16" fill="none" stroke="#80643a" stroke-width="3"/><path d="M824 73q26-29 53 0v495q-29 20-53-1zm454 0q27-28 54 0v494q-26 26-54 0z" fill="#f2e6d0"/><path d="M818 74q24 14 36 0m410 0q24 14 38 0" fill="none" stroke="#c4af90" stroke-width="7" stroke-linecap="round"/>
+        <path d="M818 66h500" fill="none" stroke="#745b35" stroke-width="13" stroke-linecap="round"/><path d="M818 63h500" fill="none" stroke="#c4a76a" stroke-width="8" stroke-linecap="round"/><path d="M835 59v14m57-14v14m57-14v14m57-14v14m57-14v14m57-14v14m57-14v14m57-14v14m57-14v14" fill="none" stroke="#8c7549" stroke-width="2.5" stroke-linecap="round"/><path d="M819 58l-11 15m510-15 11 15" fill="none" stroke="#765936" stroke-width="5" stroke-linecap="round"/>
+      </g>
+      <g class="window-flash" clip-path="url(#window-panes)" aria-hidden="true"><rect x="851" y="94" width="400" height="448" fill="#ffe8ad"/></g>
+      <path d="m856 547 400 0 157 245H724z" fill="url(#sunlight)"/>
+      <ellipse cx="426" cy="785" rx="338" ry="37" fill="#503d30" opacity=".17"/>
+      <g><path d="M122 538q0-47 46-47h552q45 0 45 47v249H122z" fill="#f4efe4"/><path d="M106 768h680v42q0 18-18 18H124q-18 0-18-18z" fill="#896b51"/><path d="M137 565q0-37 39-37h257q37 0 37 37v82H137z" fill="#faf6ec"/><path d="M150 582q0-20 21-20h112q22 0 22 20v61H150z" fill="#d1ddd3"/><path d="M422 536h278q40 0 47 44l31 194H405z" fill="url(#cover)"/><path d="m480 576 36 196m75-201 30 199m36-198 28 185" stroke="#d2dacf" stroke-opacity=".24" stroke-width="2"/><path d="M171 836v40m536-40v40" stroke="#72563f" stroke-width="13" stroke-linecap="round"/></g>
+      <g><path d="M895 597h305l-12 25H907z" fill="#9a6844"/><path d="M916 622h18v106h-18zm247 0h18v106h-18z" fill="#795337"/><path d="M934 622h229v13H934z" fill="#b17d52"/></g>
+      <g id="result-paper" role="button" tabindex="0" aria-label="Read your previous game results" style="display:none">
+        <path d="m1000 553 106 5-4 39-106-5z" fill="#fff7df" stroke="#927750" stroke-width="1.5"/>
+        <text x="1050" y="572" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#344d41">NOTE from FIL'S</text>
+        <text id="paper-summary" x="1050" y="586" text-anchor="middle" font-size="8" fill="#344d41">Click to read results</text>
+      </g>
+      <!-- The resting child and bedroom artwork remain as the opening scene. -->
+      <g class="character-position" transform="translate(448 660)">
+        <animateTransform id="character-journey" attributeName="transform" type="translate" values="0 0;0 0;30 -8;230 0;300 0;400 -78;532 30" keyTimes="0;.08;.30;.55;.65;.82;1" calcMode="spline" keySplines=".2 0 .2 1;.2 0 .2 1;.25 0 .2 1;.2 0 .2 1;.25 0 .2 1;.2 0 .2 1" dur="3.2s" begin="indefinite" additive="sum" fill="freeze"/>
+        <g class="character-turn" transform="rotate(270)">
+          <g class="character-squash">
+            <animateTransform id="character-squash-motion" attributeName="transform" type="scale" values="1 1;1 1;.82 1.12;1.16 .9;.78 1.16;1.08 .95;1 1" keyTimes="0;.65;.72;.82;.90;.96;1" calcMode="spline" keySplines=".2 0 .2 1;.2 0 .2 1;.2 0 .2 1;.25 0 .2 1;.2 0 .2 1;.2 0 .2 1" dur="3.2s" begin="indefinite" fill="freeze"/>
+            <g class="person" transform="translate(-956 -650)">
+              <g class="child-proportions" transform="translate(956 680) scale(1.06 .82) translate(-956 -680)">
+                <g class="upper-body" transform="rotate(0 956 680)">
+                  <animateTransform id="character-sit" attributeName="transform" type="rotate" values="0 956 680;0 956 680;82 956 680;82 956 680;82 956 680;82 956 680;82 956 680" keyTimes="0;.08;.30;.55;.65;.82;1" calcMode="spline" keySplines=".2 0 .2 1;.2 0 .2 1;.25 0 .2 1;.2 0 .2 1;.25 0 .2 1;.2 0 .2 1" dur="3.2s" begin="indefinite" additive="sum" fill="freeze"/>
+                  <g class="torso" transform="translate(956 0) scale(.86 1) translate(-956 0)">
+                    <path d="M906 492q46-29 90 0l7 145q1 25-10 40l-21 24h-49l-22-26q-12-15-8-38z" fill="#c83d38"/>
+                    <path d="M916 509q-14 38-16 100m87-96q13 48 17 98" fill="none" stroke="#c68d71" stroke-width="11" stroke-linecap="round"/>
+                    <path d="M906 629q32 17 67 6l24 28q-27 30-60 26l-40-31z" fill="#a92f32"/>
+                  </g>
+                  <g class="head" transform="rotate(0 956 500)">
+                    <animateTransform id="character-head" attributeName="transform" type="rotate" values="0 956 500;-5 956 500;0 956 500;0 956 500;0 956 500;0 956 500;0 956 500" keyTimes="0;.08;.30;.55;.65;.82;1" calcMode="spline" keySplines=".2 0 .2 1;.2 0 .2 1;.25 0 .2 1;.2 0 .2 1;.25 0 .2 1;.2 0 .2 1" dur="3.2s" begin="indefinite" additive="sum" fill="freeze"/>
+                    <g transform="translate(956 500) scale(1.12) translate(-956 -500)">
+                      <path d="M929 421q8-48 45-38 36 11 28 60l-7 35-58-4z" fill="#58493f"/>
+                      <path d="M938 448q0-36 31-37 32 0 34 37l-5 29q-8 29-29 29t-29-29z" fill="#d9ad8f"/>
+                      <path d="M931 438q7-38 45-37 23 0 36 18-29-8-48 8-13 11-33 11z" fill="#58493f"/>
+                      <path d="M964 481v30m21-32v30" stroke="#bd886e" stroke-width="3"/>
+                      <path d="M940 501q24 11 48-1" stroke="#e7c8aa" stroke-width="2" fill="none"/>
+                    </g>
+                  </g>
+                </g>
+                <g class="legs" transform="rotate(0 956 680)">
+                  <animateTransform id="character-legs" attributeName="transform" type="rotate" values="0 956 680;0 956 680;0 956 680;0 956 680;78 956 680;78 956 680;78 956 680" keyTimes="0;.08;.30;.55;.65;.82;1" calcMode="spline" keySplines=".2 0 .2 1;.2 0 .2 1;.25 0 .2 1;.2 0 .2 1;.25 0 .2 1;.2 0 .2 1" dur="3.2s" begin="indefinite" additive="sum" fill="freeze"/>
+                  <path d="M923 678h74l-2 36h-24l-12-14-12 14h-26z" fill="#3978bd"/>
+                  <path d="M932 711h19v45h-19zm36 0h19v45h-19z" fill="#d9ad8f"/>
+                  <path d="M918 754q-3-12 8-14h16q10 5 5 17l-4 8h-29zm59 0q-3-12 8-14h16q10 5 5 17l-4 8h-29z" fill="#413d39"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g class="speech-bubble" role="button" tabindex="0" aria-label="Start the farm"><path d="M875 190q0-18 18-18h106q18 0 18 18v37q0 18-18 18h-47l-17 20 3-20h-45q-18 0-18-18z" fill="#fffaf0" stroke="#6f7766" stroke-width="2"/><text x="946" y="218" text-anchor="middle" font-family="'Avenir Next', Avenir, sans-serif" font-size="21" font-weight="700" letter-spacing="1" fill="#344d41">AYO!</text></g>
+    </svg>
+    <div class="opening-controls"><button id="sound-toggle" class="sound-toggle" type="button" aria-label="Mute sound" aria-pressed="true" title="Mute sound">♫</button><button id="reset-progress" type="button">Reset progress</button></div>
+  </main>
+  <section id="game-screen" aria-label="Game" inert>
+  <canvas id="world" aria-label="Game: 3D farm viewed from above. Click baskets to inspect and count their apples."></canvas>
+  <div class="bamboo-frame" aria-hidden="true"><i class="pole top"></i><i class="pole right"></i><i class="pole bottom"></i><i class="pole left"></i></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div id="question-intro" aria-hidden="true">Three baskets hold <strong>12 apples</strong> altogether. How many apples are in one basket?</div>
+  <aside class="message-rail" aria-label="Puzzle messages">
+    <section class="question-panel" aria-label="Uncle Fil's question">
+      <span id="day-label" class="day-heading">Day 1</span>
+      <p>Three baskets contain equal numbers of apples. Together they hold <strong>12 apples</strong>. How many are in one basket?</p>
+    </section>
+    <form id="answer-form" class="answer-panel">
+      <div id="system-fields"></div>
+      <label>Equation <input id="equation" required maxlength="160" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Write an equation from the question"></label>
+      <label>Value of your variable <input id="solution" required maxlength="40" autocomplete="off" placeholder="Your solution"></label>
+      <button class="submit-answer" type="submit">Submit answer →</button>
+    </form>
+  </aside>
+  </section>
+  <dialog id="reset-dialog" aria-labelledby="reset-title">
+    <span class="eyebrow">START FRESH</span>
+    <h2 id="reset-title">Reset your progress?</h2>
+    <p>This will clear your saved day and level and start the game over.</p>
+    <button id="confirm-reset" type="button">Reset progress</button>
+    <button id="cancel-reset" type="button">Keep playing</button>
+  </dialog>
+  <dialog id="results-dialog" aria-labelledby="results-title">
+    <span class="eyebrow">A NOTE FROM UNCLE FIL</span>
+    <h2 id="results-title">Your farm report</h2>
+    <p id="submitted-answer"></p>
+    <p id="equation-result"></p>
+    <p id="solution-result"></p>
+    <p id="result-explanation"></p>
+    <button id="close-results" type="button">Back to bedroom</button>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="error" class="error" role="alert" hidden></div>
+  </div>
+  <script type="module">
+    import('./src/audio.js').then(({ playSound }) => { window.playGameSound = playSound; });
+    let opening = false;
+    let zoomTimer;
+    const start = () => {
+      if (opening || document.body.classList.contains('started')) return;
+      opening = true;
+      document.body.classList.add('starting');
+      window.playGameSound?.('start');
+      bubble.classList.add('leaving');
+      const motions = ['character-journey', 'character-sit', 'character-head', 'character-legs', 'character-squash-motion'].map(id => document.getElementById(id));
+      const begin = () => { document.body.classList.add('started'); document.querySelector('#game-screen').inert = false; document.dispatchEvent(new Event('game-start')); }; 
+      const zoom = () => {
+        const openingScene = document.querySelector('#opening-scene');
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) { begin(); return; }
+        const finish = event => {
+          if (event && (event.target !== openingScene || event.propertyName !== 'transform')) return;
+          openingScene.removeEventListener('transitionend', finish);
+          clearTimeout(zoomTimer);
+          begin();
+        };
+        openingScene.addEventListener('transitionend', finish);
+        openingScene.classList.add('zooming');
+          zoomTimer = setTimeout(() => finish(), 1900);
+      };
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches || motions.some(motion => !motion?.beginElement)) { zoom(); return; }
+      motions[0].addEventListener('endEvent', zoom, { once: true });
+      motions.forEach(motion => motion.beginElement());
+    };
+    const bubble = document.querySelector('.speech-bubble');
+    document.addEventListener('bedroom-return', () => {
+      opening = false;
+      document.body.classList.remove('starting');
+      document.querySelector('#opening-scene').classList.remove('zooming');
+      document.querySelector('#game-screen').inert = true;
+      bubble.classList.remove('leaving');
+      document.querySelector('.bedroom-art').setCurrentTime(0);
+    });
+    bubble.addEventListener('click', start);
+    bubble.addEventListener('keydown', event => {
+      if (event.code === 'Enter' || event.code === 'Space') { event.preventDefault(); start(); }
+    });
+    import('./src/game.js').catch((error) => {
+      console.error(error);
+      const notice = document.querySelector('#error');
+      notice.hidden = false;
+      notice.textContent = 'The farm could not start. Try a browser with WebGL enabled, then reload.';
+    });
+  </script>
+</body>
+</html>
